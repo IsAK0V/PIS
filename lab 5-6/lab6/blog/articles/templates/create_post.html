@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Написать статью</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/article.css">
+</head>
+<body>
+    <div class="header"><img src="{{ STATIC_URL }}img/dpb-logo.png" alt="Логотип" /></div>
+    <div class="content">
+        <h1>Написать статью</h1>
+        <form method="POST">{% csrf_token %}
+            <input type="text" name="title" placeholder="Название статьи" value="{{ form.title }}">
+            <textarea name="text" placeholder="Текст статьи">{{ form.text }}</textarea>
+            <input type="submit" value="Сохранить">
+        </form>
+        {% if form.errors %}<p class="error">{{ form.errors }}</p>{% endif %}
+    </div>
+</body>
+</html>
