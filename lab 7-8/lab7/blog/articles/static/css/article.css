@@ -1,0 +1,94 @@
+/* ─── Общие стили ─── */
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+    margin: 0; padding: 0;
+}
+a { color: #ffffff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ─── Шапка ─── */
+.header { padding: 10px 0; }
+.header img {
+    display: block;
+    width: 318px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header-links { text-align: right; padding: 0 20px 10px; font-size: 13px; }
+.header-links a { margin-left: 15px; }
+
+/* ─── Список постов ─── */
+.archive {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ─── Карточка поста ─── */
+.one-post {
+    background: rgba(255,255,255,0.12);
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.post-managment { display: flex; justify-content: space-between; align-items: baseline; }
+.post-title { margin: 0 0 8px; }
+.post-title a { color: #ffffff; }
+.article-info { overflow: hidden; margin-bottom: 8px; font-size: 13px; opacity: .8; }
+.article-author { width: 50%; float: left; }
+.article-created-date { text-align: right; }
+.article-text { clear: both; margin: 0; line-height: 1.6; }
+
+/* ─── Кнопка свернуть (лаб 7) ─── */
+.fold-button {
+    cursor: pointer; font-size: 12px; opacity: .7;
+    margin: 0; user-select: none;
+}
+.fold-button:hover { opacity: 1; }
+
+/* Задание лаб 7: сворачивание через CSS */
+.one-post.folded .article-info,
+.one-post.folded .article-text { display: none; }
+
+/* ─── Тень поста (лаб 8) ─── */
+.one-post-shadow {
+    position: absolute; top: 0; left: 0;
+    height: 100%; width: 100%;
+    background: black;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* ─── Страница одной статьи ─── */
+.article .content {
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.article h1 { margin-bottom: 10px; }
+.article .article-text { font-size: 15px; line-height: 1.8; }
+.article .back-link { display: inline-block; margin-top: 20px; }
+
+/* ─── Форма (лаб 5, 6) ─── */
+.content { width: 680px; margin: 0 auto; padding: 30px 0; }
+.content h1 { margin-bottom: 20px; }
+.content form input[type=text],
+.content form input[type=password],
+.content form input[type=email],
+.content form textarea {
+    display: block; width: 100%; box-sizing: border-box;
+    padding: 10px; margin-bottom: 14px;
+    border: none; border-radius: 3px;
+    font-size: 14px; font-family: Tahoma, Arial, sans-serif;
+}
+.content form textarea { min-height: 200px; resize: vertical; }
+.content form input[type=submit] {
+    background: #16a085; color: #fff; border: none;
+    padding: 10px 30px; font-size: 15px; border-radius: 3px; cursor: pointer;
+}
+.content form input[type=submit]:hover { background: #1abc9c; }
+.error { color: #e74c3c; background: rgba(0,0,0,.2); padding: 8px; border-radius: 3px; margin-top: 10px; }
