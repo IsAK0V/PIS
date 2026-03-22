@@ -1,0 +1,148 @@
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 960px;
+    margin: 30px auto;
+    text-align: center;
+    position: relative;
+}
+
+.logo-link {
+    display: block;
+    text-align: center;
+}
+
+.logo-image {
+    width: 260px;
+    height: auto;
+    display: inline-block;
+}
+
+.top-links {
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+.top-links a,
+.top-links .username {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 15px;
+    display: inline-block;
+}
+
+.top-links a:hover {
+    text-decoration: underline;
+}
+
+.archive {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.article-content {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    clear: both;
+}
+
+.one-post,
+.article-content {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.one-post {
+    position: relative;
+    overflow: hidden;
+}
+
+.one-post-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    opacity: 0;
+    z-index: 1;
+}
+
+.post-title,
+.fold-button,
+.article-info,
+.article-text {
+    position: relative;
+    z-index: 2;
+}
+
+.post-title {
+    margin-top: 0;
+}
+
+.post-title a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.post-title a:hover {
+    text-decoration: underline;
+}
+
+.article-info {
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.article-author {
+    width: 50%;
+    float: left;
+}
+
+.article-created-date {
+    width: 50%;
+    float: right;
+    text-align: right;
+}
+
+.article-text {
+    clear: both;
+    line-height: 1.5;
+}
+
+.fold-button {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.fold-button:hover {
+    text-decoration: underline;
+}
+
+.one-post.folded .article-author {
+    display: none;
+}
+
+.one-post.folded .article-created-date {
+    display: none;
+}
+
+.one-post.folded .article-text {
+    display: none;
+}
